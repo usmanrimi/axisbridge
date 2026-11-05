@@ -4574,3 +4574,185 @@ p:last-child {
   position: relative;
   z-index: 2;
 }
+
+
+/* ==========================================================================
+   HOMEPAGE FINAL REFINEMENTS & ANIMATIONS
+   1. Hero text subtle flowing entrance
+   2. 5 Country Flags layout & responsive glow
+   3. Who We Are smooth entrance animation
+   4. Key Figures scroll-triggered entrance
+   5. Five Business Pillars scroll-triggered cascade & subtle hover
+   ========================================================================== */
+
+/* Hero Text Flowing Silk Entrance */
+@keyframes heroFlowIn {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(4px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+.hero-animate-in {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: heroFlowIn 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, transform, filter;
+}
+.hero-animate-in:nth-child(1) { animation-delay: 0.10s; }
+.hero-animate-in:nth-child(2) { animation-delay: 0.28s; }
+.hero-animate-in:nth-child(3) { animation-delay: 0.46s; }
+.hero-animate-in:nth-child(4) { animation-delay: 0.64s; }
+.hero-animate-in:nth-child(5) { animation-delay: 0.82s; }
+
+/* 5 Country Flags Hero Dock */
+.bilateral-corridor-card {
+  max-width: 960px !important;
+  margin: 28px auto 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.corridor-node-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 9px 18px !important;
+  min-width: 130px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(22, 124, 128, 0.35) !important;
+  border-radius: var(--radius-sm) !important;
+  color: #0A2540 !important;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 16px rgba(22, 124, 128, 0.2), 0 0 12px rgba(45, 212, 191, 0.15) !important;
+}
+
+.corridor-node-btn:hover {
+  background: #FFFFFF !important;
+  border-color: #2DD4BF !important;
+  transform: translateY(-3px) scale(1.03) !important;
+  box-shadow: 0 8px 24px rgba(22, 124, 128, 0.35), 0 0 20px rgba(45, 212, 191, 0.35) !important;
+}
+
+.corridor-node-btn .city {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0A2540 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Who We Are Smooth Entrance Animation */
+#who-we-are .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+#who-we-are .reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#who-we-are .who-we-are-text.reveal.in-view {
+  transition-delay: 0.12s;
+}
+
+#who-we-are .who-we-are-visual.reveal.in-view {
+  transition-delay: 0.26s;
+}
+
+/* Key Figures Scroll-Triggered Entrance */
+.stats-strip-item {
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              background var(--transition-smooth),
+              box-shadow var(--transition-smooth) !important;
+}
+
+.stats-strip-item.stat-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.stats-strip-item:nth-child(1).stat-visible { transition-delay: 0.08s; }
+.stats-strip-item:nth-child(2).stat-visible { transition-delay: 0.22s; }
+.stats-strip-item:nth-child(3).stat-visible { transition-delay: 0.36s; }
+.stats-strip-item:nth-child(4).stat-visible { transition-delay: 0.50s; }
+
+.stats-strip-item.stat-visible .stat-value {
+  animation: statNumberPop 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+@keyframes statNumberPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.65) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Five Business Pillars Scroll-Triggered Cascade & Subtle Hover */
+.pillars-nexus-grid .pillar-nexus-card {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease !important;
+}
+
+.pillars-nexus-grid.in-view .pillar-nexus-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pillars-nexus-grid.in-view .pillar-nexus-card:nth-child(1) { transition-delay: 0.10s; }
+.pillars-nexus-grid.in-view .pillar-nexus-card:nth-child(2) { transition-delay: 0.22s; }
+.pillars-nexus-grid.in-view .pillar-nexus-card:nth-child(3) { transition-delay: 0.34s; }
+.pillars-nexus-grid.in-view .pillar-nexus-card:nth-child(4) { transition-delay: 0.46s; }
+.pillars-nexus-grid.in-view .pillar-nexus-card:nth-child(5) { transition-delay: 0.58s; }
+
+.pillars-nexus-grid.in-view .pillar-nexus-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.08) 100%) !important;
+  border-color: rgba(45, 212, 191, 0.6) !important;
+  border-top-color: #FFFFFF !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.38), 0 0 28px rgba(45, 212, 191, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  .hero-content .display-title {
+    white-space: normal !important;
+    font-size: clamp(24px, 6vw, 36px) !important;
+  }
+  .hero-content .lead-text {
+    white-space: normal !important;
+    font-size: 14.5px !important;
+  }
+  .corridor-node-btn {
+    min-width: 110px !important;
+    padding: 8px 14px !important;
+  }
+}
