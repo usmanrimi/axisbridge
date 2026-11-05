@@ -49,6 +49,31 @@
   <main id="mainContent">
         <!-- PAGE HERO: BALANCED ARCHITECTURAL EDITORIAL COMPOSITION -->
     <section class="page-hero">
+    <div class="page-hero-backdrop" aria-hidden="true">
+      <svg viewBox="0 0 1600 650" preserveAspectRatio="xMidYMid slice" class="page-hero-pattern-svg">
+        <defs>
+          <mask id="heroPageMask">
+            <rect width="1600" height="650" fill="#000"/>
+            <g fill="#fff" transform="translate(800 325) scale(5.2) translate(-935 -777)">
+              <use href="#mk" x="847" y="732" width="176" height="90"/>
+            </g>
+          </mask>
+          <linearGradient id="pageHeroTint" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0A2540" stop-opacity="0.8"/>
+            <stop offset="50%" stop-color="#167C80" stop-opacity="0.65"/>
+            <stop offset="100%" stop-color="#14181B" stop-opacity="0.85"/>
+          </linearGradient>
+        </defs>
+        <!-- Actual Large Architectural Bridge Photograph from Hero -->
+        <image href="assets/images/hero_bridge_wide.jpg" width="1600" height="650" preserveAspectRatio="xMidYMid slice" mask="url(#heroPageMask)" opacity="0.65"/>
+        <rect width="1600" height="650" fill="url(#pageHeroTint)" mask="url(#heroPageMask)" style="mix-blend-mode: overlay;"/>
+        <g fill="none" stroke="#B38F0C" stroke-width="2" opacity="0.75" transform="translate(800 325) scale(5.2) translate(-935 -777)">
+          <use href="#mk" x="847" y="732" width="176" height="90"/>
+        </g>
+      </svg>
+      <div class="page-hero-gradient-overlay"></div>
+    </div>
+    
       <div class="container">
         <div class="page-hero-grid">
           <div class="page-hero-text">
@@ -217,13 +242,15 @@
 
   <!-- Global Footer -->
     <!-- Global Footer with Hero Bridge Pattern Image Backdrop -->
+    <!-- Global Footer with Centered Hero Bridge Pattern Image Backdrop -->
+    <!-- Global Footer with Centered Hero Bridge Pattern Image Backdrop -->
   <footer class="site-footer">
     <div class="footer-pattern-backdrop" aria-hidden="true">
       <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" class="footer-pattern-svg">
         <defs>
           <mask id="footerBridgeMask">
             <rect width="1600" height="700" fill="#000"/>
-            <g fill="#fff" transform="translate(800 50) scale(6.6) translate(-847 -732)">
+            <g fill="#fff" transform="translate(800 350) scale(5.4) translate(-935 -777)">
               <use href="#mk" x="847" y="732" width="176" height="90"/>
             </g>
           </mask>
@@ -237,8 +264,8 @@
         <image href="assets/images/hero_bridge_wide.jpg" width="1600" height="700" preserveAspectRatio="xMidYMid slice" mask="url(#footerBridgeMask)" opacity="0.65"/>
         <!-- Brand color overlay on masked bridge -->
         <rect width="1600" height="700" fill="url(#footerTint)" mask="url(#footerBridgeMask)" style="mix-blend-mode: overlay;"/>
-        <!-- Gold architectural outline tracing bridge pattern geometry -->
-        <g fill="none" stroke="#B38F0C" stroke-width="2" opacity="0.75" transform="translate(800 50) scale(6.6) translate(-847 -732)">
+        <!-- Gold architectural outline tracing bridge pattern geometry perfectly centered -->
+        <g fill="none" stroke="#B38F0C" stroke-width="2.2" opacity="0.8" transform="translate(800 350) scale(5.4) translate(-935 -777)">
           <use href="#mk" x="847" y="732" width="176" height="90"/>
         </g>
       </svg>

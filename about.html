@@ -49,6 +49,31 @@
   <main id="mainContent">
     <!-- PAGE HERO: BALANCED ARCHITECTURAL EDITORIAL COMPOSITION -->
     <section class="page-hero">
+    <div class="page-hero-backdrop" aria-hidden="true">
+      <svg viewBox="0 0 1600 650" preserveAspectRatio="xMidYMid slice" class="page-hero-pattern-svg">
+        <defs>
+          <mask id="heroPageMask">
+            <rect width="1600" height="650" fill="#000"/>
+            <g fill="#fff" transform="translate(800 325) scale(5.2) translate(-935 -777)">
+              <use href="#mk" x="847" y="732" width="176" height="90"/>
+            </g>
+          </mask>
+          <linearGradient id="pageHeroTint" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0A2540" stop-opacity="0.8"/>
+            <stop offset="50%" stop-color="#167C80" stop-opacity="0.65"/>
+            <stop offset="100%" stop-color="#14181B" stop-opacity="0.85"/>
+          </linearGradient>
+        </defs>
+        <!-- Actual Large Architectural Bridge Photograph from Hero -->
+        <image href="assets/images/hero_bridge_wide.jpg" width="1600" height="650" preserveAspectRatio="xMidYMid slice" mask="url(#heroPageMask)" opacity="0.65"/>
+        <rect width="1600" height="650" fill="url(#pageHeroTint)" mask="url(#heroPageMask)" style="mix-blend-mode: overlay;"/>
+        <g fill="none" stroke="#B38F0C" stroke-width="2" opacity="0.75" transform="translate(800 325) scale(5.2) translate(-935 -777)">
+          <use href="#mk" x="847" y="732" width="176" height="90"/>
+        </g>
+      </svg>
+      <div class="page-hero-gradient-overlay"></div>
+    </div>
+    
       <div class="container">
         <div class="page-hero-grid">
           <div class="page-hero-text hero-animate-in">
@@ -106,22 +131,36 @@
       </div>
     </section>
 
-    <!-- SECTION: VISION & MISSION (Sophisticated Editorial Layout without Colored Cards) -->
+            <!-- SECTION: VISION & MISSION (Two Attractive Side-by-Side Cards) -->
     <section class="section section-paper-warm" id="vision-mission">
       <div class="container">
-        <div class="editorial-vision-mission reveal">
-          <div class="vision-mission-column">
-            <div class="kicker" style="color: var(--teal); margin-bottom: 8px;">Our Vision</div>
-            <h3>Pan-Regional Institutional Platform</h3>
-            <p>
+        <div class="mission-vision-cards-grid reveal">
+          <!-- Card 1: Our Vision -->
+          <div class="mv-card mv-card-vision">
+            <div class="mv-card-header">
+              <div class="mv-icon-badge" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></svg>
+              </div>
+              <span class="mv-kicker">Strategic Horizon</span>
+            </div>
+            <h3 class="mv-title">Our Vision</h3>
+            <div class="mv-subtitle">Pan-Regional Institutional Platform</div>
+            <p class="mv-desc">
               To become the premier trusted cross-border platform connecting African demand, world-class institutions, technology ecosystems and high-value commercial opportunities across North Africa and the Gulf.
             </p>
           </div>
 
-          <div class="vision-mission-column mission">
-            <div class="kicker" style="color: var(--gold); margin-bottom: 8px;">Our Mission</div>
-            <h3>Seamless, Safe &amp; Valuable Execution</h3>
-            <p>
+          <!-- Card 2: Our Mission -->
+          <div class="mv-card mv-card-mission">
+            <div class="mv-card-header">
+              <div class="mv-icon-badge" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg>
+              </div>
+              <span class="mv-kicker">Operational Mandate</span>
+            </div>
+            <h3 class="mv-title">Our Mission</h3>
+            <div class="mv-subtitle">Seamless, Safe &amp; Valuable Execution</div>
+            <p class="mv-desc">
               To make cross-border opportunities easier to access, safer to navigate and more commercially valuable to execute through credible partnerships, on-the-ground local knowledge, technology-enabled coordination and institutional operating systems.
             </p>
           </div>
@@ -130,7 +169,7 @@
     </section>
 
     <!-- SECTION: HOW WE WORK (Structured Non-Overflowing Operations Framework) -->
-    <section class="section section-charcoal" id="how-we-work">
+    <section class="section section-operations-brand" id="how-we-work">
       <div class="container">
         <div class="reveal" style="max-width: 1000px; margin-bottom: 30px;">
           <div class="kicker kicker-gold">Operating Model</div>
@@ -185,56 +224,56 @@
       </div>
     </section>
 
-    <!-- SECTION: EXECUTIVE LEADERSHIP (Identical Design Language Across Homepage & About Page) -->
-    <section class="section section-charcoal" id="leadership">
+            <!-- SECTION: EXECUTIVE LEADERSHIP (Clean Light Background & Crisp Typography) -->
+    <section class="section section-founders-light" id="leadership">
       <div class="container">
         <div class="reveal" style="max-width: 100%; margin-bottom: 50px;">
-          <div class="kicker kicker-gold">Leadership Advantage</div>
-          <h2 class="display-title" style="color: #FFFFFF; font-size: clamp(42px, 5.2vw, 64px); line-height: 1.12; margin-bottom: 16px;">Two founders. Complementary market advantage.</h2>
-          <p class="lead-text" style="color: #A3AFBF; font-size: 17.5px; line-height: 1.65; max-width: 840px; margin: 0; font-weight: 400;">
+          <div class="kicker" style="color: var(--teal); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Leadership Advantage</div>
+          <h2 class="display-title" style="color: var(--charcoal); font-size: clamp(38px, 4.8vw, 58px); line-height: 1.15; margin-bottom: 16px;">Two founders. Complementary market advantage.</h2>
+          <p class="lead-text" style="color: #4A5568; font-size: 17.5px; line-height: 1.65; max-width: 840px; margin: 0; font-weight: 400;">
             Axis Bridge combines deep Nigerian commercial and relationship networks on one side, and long-standing Egyptian, academic and international market experience on the other.
           </p>
         </div>
 
-                <div class="leadership-grid-modern reveal">
-          <!-- Founder 1: Muhammad Kasim -->
-          <div class="leader-card-modern" style="background-color: var(--charcoal-surface); border-color: var(--charcoal-border);">
+        <div class="leadership-grid-modern reveal">
+          <!-- Founder 1: Muhammad Kasim (Suit Photo) -->
+          <div class="leader-card-modern">
             <div class="leader-portrait-wrap">
               <img src="assets/images/dr_ahmad_muhammad.jpg" alt="Muhammad Kasim — Co-Founder &amp; Executive Chairman" class="leader-portrait-img">
             </div>
             <div class="leader-bio-wrap">
               <div>
-                <span class="leader-role" style="color: var(--gold-light);">Co-Founder &amp; Executive Chairman</span>
-                <h3 style="color: #FFFFFF; font-size: 26px; margin-bottom: 12px;">Muhammad Kasim</h3>
-                <p style="color: #CBD5E1; font-size: 15px; line-height: 1.7; margin-bottom: 18px;">
+                <span class="leader-role">Co-Founder &amp; Executive Chairman</span>
+                <h3>Muhammad Kasim</h3>
+                <p>
                   Brings high-level Nigerian business development, investor relations, strategic partnerships, major opportunity origination and corporate governance. Leads the firm's sovereign dialogue, capital introductions, and senior commercial relationships across West Africa.
                 </p>
               </div>
               <div class="leader-tags">
-                <span style="background: rgba(22, 124, 128, 0.25); color: var(--gold-light); border: 1px solid var(--teal-border);">Nigeria Relationships</span>
-                <span style="background: rgba(22, 124, 128, 0.25); color: var(--gold-light); border: 1px solid var(--teal-border);">Investor Networks</span>
-                <span style="background: rgba(22, 124, 128, 0.25); color: var(--gold-light); border: 1px solid var(--teal-border);">Strategic Origination</span>
+                <span>Nigeria Relationships</span>
+                <span>Investor Networks</span>
+                <span>Strategic Origination</span>
               </div>
             </div>
           </div>
 
-          <!-- Founder 2: Dr. Ahmad Muhammad -->
-          <div class="leader-card-modern" style="background-color: var(--charcoal-surface); border-color: var(--charcoal-border);">
+          <!-- Founder 2: Dr. Ahmad Muhammad (White Attire Photo) -->
+          <div class="leader-card-modern">
             <div class="leader-portrait-wrap">
               <img src="assets/images/muhammad_kasim.png" alt="Dr. Ahmad Muhammad — Co-Founder &amp; Chief Executive Officer" class="leader-portrait-img">
             </div>
             <div class="leader-bio-wrap">
               <div>
-                <span class="leader-role" style="color: var(--gold-light);">Co-Founder &amp; Chief Executive Officer</span>
-                <h3 style="color: #FFFFFF; font-size: 26px; margin-bottom: 12px;">Dr. Ahmad Muhammad</h3>
-                <p style="color: #CBD5E1; font-size: 15px; line-height: 1.7; margin-bottom: 18px;">
+                <span class="leader-role">Co-Founder &amp; Chief Executive Officer</span>
+                <h3>Dr. Ahmad Muhammad</h3>
+                <p>
                   Brings corporate strategy, Egypt and North Africa relationships, academic &amp; hospital institutional alliances, service design, technology systems and execution quality. Leads the Cairo operational desk and oversees bilateral partner accreditation and delivery standards.
                 </p>
               </div>
               <div class="leader-tags">
-                <span style="background: rgba(22, 124, 128, 0.25); color: var(--gold-light); border: 1px solid var(--teal-border);">Egypt &amp; North Africa</span>
-                <span style="background: rgba(22, 124, 128, 0.25); color: var(--gold-light); border: 1px solid var(--teal-border);">Institutional Alliances</span>
-                <span style="background: rgba(22, 124, 128, 0.25); color: var(--gold-light); border: 1px solid var(--teal-border);">Operating Systems</span>
+                <span>Egypt &amp; North Africa</span>
+                <span>Institutional Alliances</span>
+                <span>Operating Systems</span>
               </div>
             </div>
           </div>
@@ -242,118 +281,94 @@
       </div>
     </section>
 
-    <!-- SECTION: OUR OPERATING PRINCIPLES (Structured Governance Framework) -->
+            <!-- SECTION: OUR OPERATING PRINCIPLES (4-Sided Colored Border & Smooth Expandable Hover) -->
     <section class="section section-charcoal" id="our-principles">
       <div class="container">
         <div class="reveal" style="max-width: 820px; margin-bottom: 50px;">
           <div class="kicker kicker-gold">Governance &amp; Trust</div>
           <h2 class="display-title" style="color: #FFFFFF; font-size: clamp(38px, 5vw, 62px); margin-bottom: 14px;">Structured Governance Framework</h2>
           <p class="lead-text" style="color: #CBD5E1; font-size: 18px; line-height: 1.65; margin: 0;">
-            Cross-border business requires uncompromising institutional standards. We operate under a formal 6-pillar compliance architecture in every engagement.
+            Cross-border business requires uncompromising institutional standards. We operate under a formal 6-pillar compliance architecture in every engagement. Hover or tap each principle to reveal details.
           </p>
         </div>
 
         <div class="governance-framework-grid reveal">
           <!-- 01 Transparency -->
-          <div class="governance-card">
-            <div>
-              <div class="gov-card-header">
-                <span class="gov-card-code">01 / Assurance</span>
-                <span class="gov-card-badge">Commercial Clarity</span>
-              </div>
-              <h3>Transparency</h3>
-              <p>Clear, upfront fee structures, documented scope of work, and professional invoicing. No hidden markups or opaque referral kickbacks.</p>
+          <div class="gov-card-interactive-full" tabindex="0" onclick="this.classList.toggle('is-active')">
+            <h3>Transparency <span class="expand-icon" aria-hidden="true">+</span></h3>
+            <p class="gov-main-p">Clear, upfront fee structures, documented scope of work, and professional invoicing. No hidden markups or opaque referral kickbacks.</p>
+            <div class="gov-card-expandable-content">
+              <ul>
+                <li>Full commercial scope document</li>
+                <li>Itemized institutional invoices</li>
+                <li>Zero undisclosed broker fees</li>
+              </ul>
             </div>
-            <ul class="gov-assurance-list">
-              <li>Full commercial scope document</li>
-              <li>Itemized institutional invoices</li>
-              <li>Zero undisclosed broker fees</li>
-            </ul>
           </div>
 
           <!-- 02 Compliance -->
-          <div class="governance-card">
-            <div>
-              <div class="gov-card-header">
-                <span class="gov-card-code">02 / Assurance</span>
-                <span class="gov-card-badge">Statutory Licensing</span>
-              </div>
-              <h3>Compliance</h3>
-              <p>Where a service requires a licence (medical, legal, financial, educational), we operate exclusively through appropriately certified professionals.</p>
+          <div class="gov-card-interactive-full" tabindex="0" onclick="this.classList.toggle('is-active')">
+            <h3>Compliance <span class="expand-icon" aria-hidden="true">+</span></h3>
+            <p class="gov-main-p">Where a service requires a licence (medical, legal, financial, educational), we operate exclusively through appropriately certified professionals.</p>
+            <div class="gov-card-expandable-content">
+              <ul>
+                <li>Ministry-accredited university pathways</li>
+                <li>GAHAR &amp; MoH hospital compliance</li>
+                <li>Binding bilateral legal contracts</li>
+              </ul>
             </div>
-            <ul class="gov-assurance-list">
-              <li>Ministry-accredited university pathways</li>
-              <li>GAHAR &amp; MoH hospital compliance</li>
-              <li>Binding bilateral legal contracts</li>
-            </ul>
           </div>
 
           <!-- 03 Due Diligence -->
-          <div class="governance-card">
-            <div>
-              <div class="gov-card-header">
-                <span class="gov-card-code">03 / Assurance</span>
-                <span class="gov-card-badge">Partner Audit</span>
-              </div>
-              <h3>Due Diligence</h3>
-              <p>Partners are vetted for clinical accreditation, academic standing, financial capability and ethical track record—not simply commercial access.</p>
+          <div class="gov-card-interactive-full" tabindex="0" onclick="this.classList.toggle('is-active')">
+            <h3>Due Diligence <span class="expand-icon" aria-hidden="true">+</span></h3>
+            <p class="gov-main-p">Partners are vetted for clinical accreditation, academic standing, financial capability and ethical track record—not simply commercial access.</p>
+            <div class="gov-card-expandable-content">
+              <ul>
+                <li>Verified corporate registrations</li>
+                <li>Institutional pedigree checks</li>
+                <li>Regulatory standing validation</li>
+              </ul>
             </div>
-            <ul class="gov-assurance-list">
-              <li>Verified corporate registrations</li>
-              <li>Institutional pedigree checks</li>
-              <li>Regulatory standing validation</li>
-            </ul>
           </div>
 
           <!-- 04 Confidentiality -->
-          <div class="governance-card">
-            <div>
-              <div class="gov-card-header">
-                <span class="gov-card-code">04 / Assurance</span>
-                <span class="gov-card-badge">Data Security</span>
-              </div>
-              <h3>Confidentiality</h3>
-              <p>Client medical records, student academic documentation, financial records and corporate trade secrets are safeguarded with strict protocols.</p>
+          <div class="gov-card-interactive-full" tabindex="0" onclick="this.classList.toggle('is-active')">
+            <h3>Confidentiality <span class="expand-icon" aria-hidden="true">+</span></h3>
+            <p class="gov-main-p">Client medical records, student academic documentation, financial records and corporate trade secrets are safeguarded with strict protocols.</p>
+            <div class="gov-card-expandable-content">
+              <ul>
+                <li>Encrypted document transmission</li>
+                <li>Strict non-disclosure agreements</li>
+                <li>Data privacy compliance</li>
+              </ul>
             </div>
-            <ul class="gov-assurance-list">
-              <li>Encrypted document transmission</li>
-              <li>Strict non-disclosure agreements</li>
-              <li>Data privacy compliance</li>
-            </ul>
           </div>
 
           <!-- 05 No Political Favours -->
-          <div class="governance-card">
-            <div>
-              <div class="gov-card-header">
-                <span class="gov-card-code">05 / Assurance</span>
-                <span class="gov-card-badge">Institutional Merit</span>
-              </div>
-              <h3>No Political Favours</h3>
-              <p>Our business relationships are strictly commercial and institutional, maintained completely separate from partisan or political roles.</p>
+          <div class="gov-card-interactive-full" tabindex="0" onclick="this.classList.toggle('is-active')">
+            <h3>No Political Favours <span class="expand-icon" aria-hidden="true">+</span></h3>
+            <p class="gov-main-p">Our business relationships are strictly commercial and institutional, maintained completely separate from partisan or political roles.</p>
+            <div class="gov-card-expandable-content">
+              <ul>
+                <li>Sovereign-neutral institutional channels</li>
+                <li>Merit-based university admissions</li>
+                <li>Objective clinical triage matching</li>
+              </ul>
             </div>
-            <ul class="gov-assurance-list">
-              <li>Sovereign-neutral institutional channels</li>
-              <li>Merit-based university admissions</li>
-              <li>Objective clinical triage matching</li>
-            </ul>
           </div>
 
           <!-- 06 Long-Term Value -->
-          <div class="governance-card">
-            <div>
-              <div class="gov-card-header">
-                <span class="gov-card-code">06 / Assurance</span>
-                <span class="gov-card-badge">Corridor Durability</span>
-              </div>
-              <h3>Long-Term Value</h3>
-              <p>We prioritize sustainable, repeatable bilateral institutional channels over one-off, informal transactions.</p>
+          <div class="gov-card-interactive-full" tabindex="0" onclick="this.classList.toggle('is-active')">
+            <h3>Long-Term Value <span class="expand-icon" aria-hidden="true">+</span></h3>
+            <p class="gov-main-p">We prioritize sustainable, repeatable bilateral institutional channels over one-off, informal transactions.</p>
+            <div class="gov-card-expandable-content">
+              <ul>
+                <li>Multi-year academic partnerships</li>
+                <li>Continuous clinical follow-up bridges</li>
+                <li>Expanding bilateral trade syndicates</li>
+              </ul>
             </div>
-            <ul class="gov-assurance-list">
-              <li>Multi-year academic partnerships</li>
-              <li>Continuous clinical follow-up bridges</li>
-              <li>Expanding bilateral trade syndicates</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -378,13 +393,15 @@
 
   <!-- Global Footer with Subtly Repeated Official Logo-Mark Pattern Backdrop -->
     <!-- Global Footer with Hero Bridge Pattern Image Backdrop -->
+    <!-- Global Footer with Centered Hero Bridge Pattern Image Backdrop -->
+    <!-- Global Footer with Centered Hero Bridge Pattern Image Backdrop -->
   <footer class="site-footer">
     <div class="footer-pattern-backdrop" aria-hidden="true">
       <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" class="footer-pattern-svg">
         <defs>
           <mask id="footerBridgeMask">
             <rect width="1600" height="700" fill="#000"/>
-            <g fill="#fff" transform="translate(800 50) scale(6.6) translate(-847 -732)">
+            <g fill="#fff" transform="translate(800 350) scale(5.4) translate(-935 -777)">
               <use href="#mk" x="847" y="732" width="176" height="90"/>
             </g>
           </mask>
@@ -398,8 +415,8 @@
         <image href="assets/images/hero_bridge_wide.jpg" width="1600" height="700" preserveAspectRatio="xMidYMid slice" mask="url(#footerBridgeMask)" opacity="0.65"/>
         <!-- Brand color overlay on masked bridge -->
         <rect width="1600" height="700" fill="url(#footerTint)" mask="url(#footerBridgeMask)" style="mix-blend-mode: overlay;"/>
-        <!-- Gold architectural outline tracing bridge pattern geometry -->
-        <g fill="none" stroke="#B38F0C" stroke-width="2" opacity="0.75" transform="translate(800 50) scale(6.6) translate(-847 -732)">
+        <!-- Gold architectural outline tracing bridge pattern geometry perfectly centered -->
+        <g fill="none" stroke="#B38F0C" stroke-width="2.2" opacity="0.8" transform="translate(800 350) scale(5.4) translate(-935 -777)">
           <use href="#mk" x="847" y="732" width="176" height="90"/>
         </g>
       </svg>

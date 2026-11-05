@@ -49,6 +49,31 @@
   <main id="mainContent">
     <!-- PAGE HERO: BALANCED ARCHITECTURAL EDITORIAL COMPOSITION -->
     <section class="page-hero">
+    <div class="page-hero-backdrop" aria-hidden="true">
+      <svg viewBox="0 0 1600 650" preserveAspectRatio="xMidYMid slice" class="page-hero-pattern-svg">
+        <defs>
+          <mask id="heroPageMask">
+            <rect width="1600" height="650" fill="#000"/>
+            <g fill="#fff" transform="translate(800 325) scale(5.2) translate(-935 -777)">
+              <use href="#mk" x="847" y="732" width="176" height="90"/>
+            </g>
+          </mask>
+          <linearGradient id="pageHeroTint" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0A2540" stop-opacity="0.8"/>
+            <stop offset="50%" stop-color="#167C80" stop-opacity="0.65"/>
+            <stop offset="100%" stop-color="#14181B" stop-opacity="0.85"/>
+          </linearGradient>
+        </defs>
+        <!-- Actual Large Architectural Bridge Photograph from Hero -->
+        <image href="assets/images/hero_bridge_wide.jpg" width="1600" height="650" preserveAspectRatio="xMidYMid slice" mask="url(#heroPageMask)" opacity="0.65"/>
+        <rect width="1600" height="650" fill="url(#pageHeroTint)" mask="url(#heroPageMask)" style="mix-blend-mode: overlay;"/>
+        <g fill="none" stroke="#B38F0C" stroke-width="2" opacity="0.75" transform="translate(800 325) scale(5.2) translate(-935 -777)">
+          <use href="#mk" x="847" y="732" width="176" height="90"/>
+        </g>
+      </svg>
+      <div class="page-hero-gradient-overlay"></div>
+    </div>
+    
       <div class="container">
         <div class="page-hero-grid">
           <div class="page-hero-text">
@@ -79,197 +104,162 @@
       </div>
     </section>
 
-    <!-- DETAILED PILLAR SECTIONS -->
-    <section class="section" id="pillar-details">
+        <!-- DETAILED PILLAR SECTIONS (Large Prominent Interactive CTA-Style Panels) -->
+    <section class="section section-paper-warm" id="pillar-details">
       <div class="container">
 
-        <!-- Prominent Colorful Interactive CTA-Style Panels / Buttons with Working Destinations -->
-        <div class="pillar-quick-panels-grid reveal">
-          <a href="#education" class="pillar-quick-panel panel-teal">
-            <div class="panel-icon-circle">01</div>
-            <div class="panel-info">
-              <h4>Education</h4>
-              <span>Academic Mobility &bull; Placement &rarr;</span>
-            </div>
-          </a>
-
-          <a href="#healthcare" class="pillar-quick-panel panel-charcoal">
-            <div class="panel-icon-circle">02</div>
-            <div class="panel-info">
-              <h4>Healthcare</h4>
-              <span>Vetted Hospital Matching &rarr;</span>
-            </div>
-          </a>
-
-          <a href="#tourism" class="pillar-quick-panel panel-gold">
-            <div class="panel-icon-circle">03</div>
-            <div class="panel-info">
-              <h4>Purposeful Travel</h4>
-              <span>Delegations &bull; Study Tours &rarr;</span>
-            </div>
-          </a>
-
-          <a href="#investment-trade" class="pillar-quick-panel panel-teal-deep">
-            <div class="panel-icon-circle">04</div>
-            <div class="panel-info">
-              <h4>Investment &amp; Trade</h4>
-              <span>Joint Ventures &bull; Capital &rarr;</span>
-            </div>
-          </a>
-
-          <a href="#technology" class="pillar-quick-panel panel-dark">
-            <div class="panel-icon-circle">05</div>
-            <div class="panel-info">
-              <h4>Technology</h4>
-              <span>Enterprise SaaS &bull; AI &rarr;</span>
-            </div>
-          </a>
-        </div>
-
         <!-- 01 EDUCATION -->
-        <div class="pillar-detail-block reveal" id="education">
-          <div>
-            <div class="kicker" style="color: var(--teal);">Global Academic Mobility</div>
-            <h2 class="section-title" style="color: var(--charcoal); font-size: clamp(32px, 3.8vw, 44px);">Education</h2>
-            <p class="lead-text" style="color: var(--teal);">Direct Placement &bull; Relocation &bull; Institutional Partnerships</p>
-            <p class="body-muted">
-              We help families, private secondary schools, universities and ministries navigate international education across Africa and North Africa. Our active commercial focus provides Nigerian students and academic institutions with direct, structured channels to Egypt's globally ranked public and private universities.
-            </p>
-            <ul class="pillar-deliverables">
-              <li>Direct university placement and admissions matching across Medicine, Engineering, AI, and Business.</li>
-              <li>End-to-end relocation support: document legalization, visas, airport reception, student housing and settlement.</li>
-              <li>Institutional bilateral partnerships, joint degrees, faculty exchanges, and student mobility programmes.</li>
-              <li>Custom executive training, short courses, and specialized professional diplomas.</li>
-              <li>Joint academic research collaboration and cross-border university accreditation.</li>
-            </ul>
-            <div style="margin-top: 30px;">
-              <a href="opportunities.html#education-track" class="pillar-cta-btn-white" style="border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">Explore Education Track <span class="arr">→</span></a>
-            </div>
-          </div>
-          <div class="pillar-media">
-            <div class="image-frame-geometric">
-              <div class="image-frame-inner">
-                <img src="assets/images/education.jpg" alt="Axis Bridge international education placement and university campus" loading="lazy">
+        <div class="pillar-interactive-panel panel-theme-teal reveal" id="education">
+          <div class="pillar-panel-inner-grid">
+            <div>
+              <div class="pillar-panel-tagbar">
+                <span class="pillar-panel-badge">Pillar 01 // Bilateral Track</span>
+                <span class="kicker" style="color: var(--teal); margin: 0;">Academic Mobility &bull; Placement</span>
               </div>
+              <h2 class="pillar-panel-title">Education</h2>
+              <div class="pillar-panel-subtitle">Direct Placement &bull; Relocation &bull; Institutional Partnerships</div>
+              <p class="pillar-panel-desc">
+                We help families, private secondary schools, universities and ministries navigate international education across Africa and North Africa. Our active commercial focus provides Nigerian students and academic institutions with direct, structured channels to Egypt's globally ranked public and private universities.
+              </p>
+              <ul class="pillar-panel-features">
+                <li>Direct university placement and admissions matching across Medicine, Engineering, AI, and Business.</li>
+                <li>End-to-end relocation support: document legalization, visas, airport reception, student housing and settlement.</li>
+                <li>Institutional academic partnerships, dual-degree programs, faculty exchange, and curriculum harmonization.</li>
+                <li>Executive management training, medical licensing preparation, and specialized short-course coordination.</li>
+              </ul>
+              <div>
+                <a href="opportunities.html#education-track" class="btn-pillar-interactive">
+                  Explore Education Track <span class="arr">&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="pillar-panel-photo-wrap">
+              <img src="assets/images/education.jpg" alt="Axis Bridge international education placement and academic campus lecture" loading="lazy">
             </div>
           </div>
         </div>
 
         <!-- 02 HEALTHCARE -->
-        <div class="pillar-detail-block reverse reveal" id="healthcare">
-          <div class="pillar-media">
-            <div class="image-frame-geometric">
-              <div class="image-frame-inner">
-                <img src="assets/images/healthcare.jpg" alt="Axis Bridge vetted hospital matching and international medical care" loading="lazy">
+        <div class="pillar-interactive-panel panel-theme-blue reveal" id="healthcare">
+          <div class="pillar-panel-inner-grid">
+            <div>
+              <div class="pillar-panel-tagbar">
+                <span class="pillar-panel-badge">Pillar 02 // Bilateral Track</span>
+                <span class="kicker" style="color: var(--blue-primary); margin: 0;">Specialized Clinical Care</span>
+              </div>
+              <h2 class="pillar-panel-title">Healthcare</h2>
+              <div class="pillar-panel-subtitle">Tertiary Medical Travel &bull; Second Opinions &bull; Hospital Alliances</div>
+              <p class="pillar-panel-desc">
+                Egypt is one of Africa and the Middle East's foremost healthcare destinations, offering internationally accredited hospitals, highly trained surgical specialists, and advanced diagnostic facilities at accessible costs. Axis Bridge coordinates clinical care for patients and corporate health plans.
+              </p>
+              <ul class="pillar-panel-features">
+                <li>Patient clinical triage, doctor matching, and expedited medical appointment scheduling.</li>
+                <li>Pre-travel expert second opinions and multi-disciplinary medical board evaluations.</li>
+                <li>Turnkey medical travel: visa facilitation, hospital transfers, translation, and recovery accommodation.</li>
+                <li>Institutional hospital-to-hospital referral agreements, visiting surgeon programs, and telemedicine links.</li>
+              </ul>
+              <div>
+                <a href="opportunities.html#healthcare-track" class="btn-pillar-interactive">
+                  Explore Healthcare Track <span class="arr">&rarr;</span>
+                </a>
               </div>
             </div>
-          </div>
-          <div>
-            <div class="kicker" style="color: var(--teal);">Specialized Clinical Pathways</div>
-            <h2 class="section-title" style="color: var(--charcoal); font-size: clamp(32px, 3.8vw, 44px);">Healthcare</h2>
-            <p class="lead-text" style="color: var(--teal);">Vetted Hospital Matching &bull; Specialist Care &bull; Clinical Logistics</p>
-            <p class="body-muted">
-              We facilitate patient pathways between referring physicians in Nigeria and vetted, internationally accredited tertiary hospitals in Egypt. Our role is strictly non-clinical coordination: structuring clinical intake, eliminating intermediary price-gouging, and arranging comprehensive logistics.
-            </p>
-            <ul class="pillar-deliverables">
-              <li>Patient clinical case intake, preliminary dossier compilation, and specialized hospital matching.</li>
-              <li>Senior specialist consultations and multidisciplinary second-opinion coordination.</li>
-              <li>End-to-end medical travel logistics: medical visas, companion accommodation, airport medical transit, and language interpretation.</li>
-              <li>Hospital-to-hospital clinical exchange, visiting surgeon programmes, and physician training.</li>
-              <li>HealthTech and diagnostic equipment market introductions between international innovators and regional providers.</li>
-            </ul>
-            <div style="margin-top: 30px;">
-              <a href="opportunities.html#healthcare-track" class="pillar-cta-btn-white" style="border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">Explore Healthcare Track <span class="arr">→</span></a>
+            <div class="pillar-panel-photo-wrap">
+              <img src="assets/images/healthcare.jpg" alt="Axis Bridge tertiary medical care and specialist hospital examination room" loading="lazy">
             </div>
           </div>
         </div>
 
-        <!-- 03 TOURISM & DELEGATIONS -->
-        <div class="pillar-detail-block reveal" id="tourism">
-          <div>
-            <div class="kicker" style="color: var(--teal);">Curated Cross-Border Delegations</div>
-            <h2 class="section-title" style="color: var(--charcoal); font-size: clamp(32px, 3.8vw, 44px);">Purposeful Tourism &amp; Travel</h2>
-            <p class="lead-text" style="color: var(--teal);">Executive Missions &bull; Cultural Immersion &bull; Bilateral Study Tours</p>
-            <p class="body-muted">
-              We design purposeful cross-border journeys through accredited destination management companies and hospitality partners. We transform travel from generic vacations into curated educational, diplomatic, cultural and executive experiences.
-            </p>
-            <ul class="pillar-deliverables">
-              <li>Curated Egyptian cultural and historical itineraries for Nigerian delegations, institutions, and families.</li>
-              <li>Educational school tours, university student immersion trips, and science delegations.</li>
-              <li>Corporate trade missions, chamber of commerce delegations, and investor roadshows.</li>
-              <li>Special-interest religious and heritage journeys across Egypt, Morocco, and Saudi Arabia.</li>
-              <li>Inbound tourism facilitation introducing North African and Gulf executives to Nigeria’s cultural and business landscape.</li>
-            </ul>
-            <div style="margin-top: 30px;">
-              <a href="opportunities.html#travel-track" class="pillar-cta-btn-white" style="border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">Explore Travel Programmes <span class="arr">→</span></a>
-            </div>
-          </div>
-          <div class="pillar-media">
-            <div class="image-frame-geometric">
-              <div class="image-frame-inner">
-                <img src="assets/images/tourism.jpg" alt="Axis Bridge purposeful travel and cross-border tourism" loading="lazy">
+        <!-- 03 TOURISM & TRAVEL -->
+        <div class="pillar-interactive-panel panel-theme-gold reveal" id="tourism">
+          <div class="pillar-panel-inner-grid">
+            <div>
+              <div class="pillar-panel-tagbar">
+                <span class="pillar-panel-badge">Pillar 03 // Bilateral Track</span>
+                <span class="kicker" style="color: var(--gold); margin: 0;">Bilateral Delegations &bull; Travel</span>
               </div>
+              <h2 class="pillar-panel-title">Tourism and Travel</h2>
+              <div class="pillar-panel-subtitle">Delegations &bull; Academic Tours &bull; Special-Interest Itineraries</div>
+              <p class="pillar-panel-desc">
+                We design purposeful cross-border travel experiences that connect African professionals, student cohorts, and corporate organizations with Egypt and North Africa's world-renowned cultural, academic, and commercial landmarks.
+              </p>
+              <ul class="pillar-panel-features">
+                <li>Academic study tours and university immersion trips for high school and university student cohorts.</li>
+                <li>Corporate retreat planning, executive networking tours, and cross-border board summits.</li>
+                <li>Government, parliamentary, and trade association bilateral delegation logistics.</li>
+                <li>Curated cultural, historical, and architectural journeys across Cairo, Alexandria, Luxor, and Aswan.</li>
+              </ul>
+              <div>
+                <a href="opportunities.html#travel-track" class="btn-pillar-interactive">
+                  Explore Travel Programmes <span class="arr">&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="pillar-panel-photo-wrap">
+              <img src="assets/images/tourism.jpg" alt="Axis Bridge purposeful travel, architectural landmarks and historic cultural destinations" loading="lazy">
             </div>
           </div>
         </div>
 
         <!-- 04 INVESTMENT & TRADE -->
-        <div class="pillar-detail-block reverse reveal" id="investment-trade">
-          <div class="pillar-media">
-            <div class="image-frame-geometric">
-              <div class="image-frame-inner">
-                <img src="assets/images/trade.jpg" alt="Axis Bridge commercial investment and trade facilitation" loading="lazy">
+        <div class="pillar-interactive-panel panel-theme-charcoal reveal" id="investment-trade">
+          <div class="pillar-panel-inner-grid">
+            <div>
+              <div class="pillar-panel-tagbar">
+                <span class="pillar-panel-badge">Pillar 04 // Bilateral Track</span>
+                <span class="kicker" style="color: var(--teal-deep); margin: 0;">Commercial Capital &bull; Joint Ventures</span>
+              </div>
+              <h2 class="pillar-panel-title">Investment and Trade</h2>
+              <div class="pillar-panel-subtitle">Joint Ventures &bull; Market Entry &bull; Sovereign &amp; Private FDI</div>
+              <p class="pillar-panel-desc">
+                Axis Bridge bridges commercial gaps between West Africa and North Africa by originating, structuring, and executing direct business-to-business transactions, cross-border investments, and commercial joint ventures.
+              </p>
+              <ul class="pillar-panel-features">
+                <li>Bilateral market entry strategy, local incorporation navigation, and regulatory licensing compliance.</li>
+                <li>Joint venture origination between Nigerian and Egyptian manufacturers, distributors, and service firms.</li>
+                <li>Agricultural trade, fertilizer sourcing, machinery procurement, and specialized commodity supply chains.</li>
+                <li>FDI facilitation, sovereign investment introductions, and project finance deal advisory.</li>
+              </ul>
+              <div>
+                <a href="opportunities.html#investment-track" class="btn-pillar-interactive">
+                  Explore Investment Track <span class="arr">&rarr;</span>
+                </a>
               </div>
             </div>
-          </div>
-          <div>
-            <div class="kicker" style="color: var(--teal);">Commercial Capital &amp; Joint Ventures</div>
-            <h2 class="section-title" style="color: var(--charcoal); font-size: clamp(32px, 3.8vw, 44px);">Investment &amp; Trade</h2>
-            <p class="lead-text" style="color: var(--teal);">Market Entry &bull; Sovereign Dialogue &bull; Joint Venture Structuring</p>
-            <p class="body-muted">
-              Much broader than passive brokerage. We originate commercially viable opportunities, conduct preliminary commercial due diligence, connect reputable enterprises with verified counterparties, and coordinate the relationships needed to reach financial close.
-            </p>
-            <ul class="pillar-deliverables">
-              <li>Market entry strategy for Nigerian enterprises entering Egyptian and North African markets.</li>
-              <li>Facilitation for Egyptian manufacturing, pharmaceutical, and construction firms entering Nigeria.</li>
-              <li>Direct origination for joint ventures, distribution agreements, and local manufacturing partnerships.</li>
-              <li>Strategic real estate, industrial park, and logistics asset introductions.</li>
-              <li>Agribusiness, food security, packaging, and manufacturing trade acceleration.</li>
-              <li>Institutional business development and bilateral commercial forum coordination.</li>
-            </ul>
-            <div style="margin-top: 30px;">
-              <a href="opportunities.html#investment-track" class="pillar-cta-btn-white" style="border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">Explore Investment Track <span class="arr">→</span></a>
+            <div class="pillar-panel-photo-wrap">
+              <img src="assets/images/trade.jpg" alt="Axis Bridge cross-border commercial shipping, industrial port logistics and bilateral trade operations" loading="lazy">
             </div>
           </div>
         </div>
 
-                <!-- 05 TECHNOLOGY -->
-        <div class="pillar-detail-block reveal" id="technology">
-          <div>
-            <div class="kicker" style="color: var(--teal);">Enterprise Digital Systems</div>
-            <h2 class="section-title" style="color: var(--charcoal); font-size: clamp(32px, 3.8vw, 44px);">Technology &amp; Innovation</h2>
-            <p class="lead-text" style="color: var(--teal);">AI Solutions &bull; Automation &bull; Enterprise SaaS Distribution</p>
-            <p class="body-muted">
-              Technology is both an internal operating foundation and an active cross-border vertical. We connect regional businesses and public institutions with high-capability software engineering, AI, and digital transformation partners across Egypt's rapidly expanding tech hub.
-            </p>
-            <ul class="pillar-deliverables">
-              <li>Cross-border technology distribution, SaaS partnerships, and regional value-added reseller agreements.</li>
-              <li>AI, enterprise workflow automation, and custom ERP integration through vetted engineering partners.</li>
-              <li>EdTech platforms for African universities, schools, and professional testing bodies.</li>
-              <li>HealthTech integrations: electronic health records (EHR), telemedicine platforms, and remote patient monitoring.</li>
-              <li>Nearshore software engineering squads for corporate enterprises.</li>
-              <li>Offshore software engineering, nearshore technical talent, and cross-corridor innovation incubators.</li>
-            </ul>
-            <div style="margin-top: 30px;">
-              <a href="opportunities.html#technology-track" class="pillar-cta-btn-white" style="border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">Explore Technology Track <span class="arr">&rarr;</span></a>
-            </div>
-          </div>
-          <div class="pillar-media">
-            <!-- Proportionally Controlled Earth / Digital Technology Photograph -->
-            <div class="image-frame-geometric">
-              <div class="image-frame-inner">
-                <img src="assets/images/technology.jpg" alt="Axis Bridge digital transformation, enterprise technology and global digital connectivity" loading="lazy">
+        <!-- 05 TECHNOLOGY & INNOVATION -->
+        <div class="pillar-interactive-panel panel-theme-tech reveal" id="technology">
+          <div class="pillar-panel-inner-grid">
+            <div>
+              <div class="pillar-panel-tagbar">
+                <span class="pillar-panel-badge">Pillar 05 // Bilateral Track</span>
+                <span class="kicker" style="color: #0E7490; margin: 0;">Enterprise Digital Systems &bull; AI</span>
               </div>
+              <h2 class="pillar-panel-title">Technology and Innovation</h2>
+              <div class="pillar-panel-subtitle">AI Solutions &bull; Automation &bull; Enterprise SaaS Distribution</div>
+              <p class="pillar-panel-desc">
+                Technology is both an internal operating foundation and an active cross-border vertical. We connect regional businesses and public institutions with high-capability software engineering, AI, and digital transformation partners across Egypt's rapidly expanding tech hub.
+              </p>
+              <ul class="pillar-panel-features">
+                <li>Cross-border technology distribution, SaaS partnerships, and regional value-added reseller agreements.</li>
+                <li>AI, enterprise workflow automation, and custom ERP integration through vetted engineering partners.</li>
+                <li>EdTech platforms for African universities, schools, and professional testing bodies.</li>
+                <li>HealthTech integrations: electronic health records (EHR), telemedicine platforms, and remote patient monitoring.</li>
+                <li>Offshore software engineering, nearshore technical talent, and cross-corridor innovation incubators.</li>
+              </ul>
+              <div>
+                <a href="opportunities.html#technology-track" class="btn-pillar-interactive">
+                  Explore Technology Track <span class="arr">&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="pillar-panel-photo-wrap">
+              <img src="assets/images/technology.jpg" alt="Axis Bridge digital transformation, enterprise technology and global digital connectivity" loading="lazy">
             </div>
           </div>
         </div>
@@ -308,13 +298,15 @@
 
   <!-- Global Footer -->
     <!-- Global Footer with Hero Bridge Pattern Image Backdrop -->
+    <!-- Global Footer with Centered Hero Bridge Pattern Image Backdrop -->
+    <!-- Global Footer with Centered Hero Bridge Pattern Image Backdrop -->
   <footer class="site-footer">
     <div class="footer-pattern-backdrop" aria-hidden="true">
       <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" class="footer-pattern-svg">
         <defs>
           <mask id="footerBridgeMask">
             <rect width="1600" height="700" fill="#000"/>
-            <g fill="#fff" transform="translate(800 50) scale(6.6) translate(-847 -732)">
+            <g fill="#fff" transform="translate(800 350) scale(5.4) translate(-935 -777)">
               <use href="#mk" x="847" y="732" width="176" height="90"/>
             </g>
           </mask>
@@ -328,8 +320,8 @@
         <image href="assets/images/hero_bridge_wide.jpg" width="1600" height="700" preserveAspectRatio="xMidYMid slice" mask="url(#footerBridgeMask)" opacity="0.65"/>
         <!-- Brand color overlay on masked bridge -->
         <rect width="1600" height="700" fill="url(#footerTint)" mask="url(#footerBridgeMask)" style="mix-blend-mode: overlay;"/>
-        <!-- Gold architectural outline tracing bridge pattern geometry -->
-        <g fill="none" stroke="#B38F0C" stroke-width="2" opacity="0.75" transform="translate(800 50) scale(6.6) translate(-847 -732)">
+        <!-- Gold architectural outline tracing bridge pattern geometry perfectly centered -->
+        <g fill="none" stroke="#B38F0C" stroke-width="2.2" opacity="0.8" transform="translate(800 350) scale(5.4) translate(-935 -777)">
           <use href="#mk" x="847" y="732" width="176" height="90"/>
         </g>
       </svg>
