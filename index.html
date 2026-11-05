@@ -100,7 +100,7 @@
       <div class="hero-vignette" aria-hidden="true"></div>
 
       <!-- Hero Editorial Content: Succinct, Architectural & Distinctive (No Overlapping Elements) -->
-      <div class="container">
+      <div class="container" style="position: relative; z-index: 10;">
         <div class="hero-content">
           <h1 class="display-title hero-animate-in" style="font-size: clamp(36px, 4.4vw, 52px); line-height: 1.16; margin-bottom: 16px;">
             Connecting Markets,<br>
@@ -123,19 +123,8 @@
             </a>
           </div>
 
-
-
-          <!-- Hero Transition to Who We Are -->
-          <div>
-            <a href="#who-we-are" class="hero-scroll-transition" aria-label="Explore Who We Are">
-              <span>Discover Axis Bridge</span>
-              <span class="scroll-arrow">↓</span>
-            </a>
-          </div>
-        </div>
-
-          <!-- Active Bilateral Anchors: Dedicated Module on One Horizontal Line with Identical Shape, Typography, and Hover -->
-          <div class="bilateral-corridor-card hero-animate-in">
+          <!-- Active Bilateral Anchors: Clearly Visible Centered Module with Subtle Glowing Light Effect & Darker Readable Text -->
+          <div class="bilateral-corridor-card hero-animate-in" style="margin-top: 30px; margin-bottom: 24px;">
             <a href="markets.html#active-corridor" class="corridor-node-btn" aria-label="Abuja Nigeria Bilateral Desk">
               <svg class="flag-icon" viewBox="0 0 36 24" width="30" height="20" aria-label="Flag of Nigeria">
                 <rect width="12" height="24" fill="#008751"/>
@@ -149,7 +138,7 @@
             </a>
 
             <div class="corridor-connector">
-              <span class="corridor-label-active">Active Bilateral Corridor</span>
+              <span class="corridor-label-active" style="color: #FFFFFF; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.9);">Active Bilateral Corridor</span>
               <div class="corridor-line">
                 <span class="corridor-pulse-dot"></span>
               </div>
@@ -169,6 +158,15 @@
               </div>
             </a>
           </div>
+
+          <!-- Hero Transition to Who We Are -->
+          <div>
+            <a href="#who-we-are" class="hero-scroll-transition" aria-label="Explore Who We Are">
+              <span>Discover Axis Bridge</span>
+              <span class="scroll-arrow">↓</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -441,63 +439,61 @@
       </div>
     </section>
 
-        <!-- SECTION: LEADERSHIP PREVIEW (Polished Executive Presentation & Switched Portraits) -->
-    <section class="section section-charcoal" id="leadership-preview">
+        <!-- SECTION: LEADERSHIP PREVIEW (Redesigned with Light Background, Dark Text & Polished Presentation) -->
+    <section class="section" id="leadership-preview" style="background: #F8FAFC !important; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
       <div class="container">
-        <div class="reveal" style="max-width: 100%; margin-bottom: 50px;">
-          <h2 class="display-title" style="color: #FFFFFF; font-size: clamp(42px, 5.2vw, 64px); line-height: 1.12; margin-bottom: 16px;">Two founders. Complementary market advantage.</h2>
-          <p class="lead-text" style="color: #CBD5E1; font-size: 17.5px; line-height: 1.65; max-width: 860px; margin: 0; font-weight: 400;">
+        <div class="reveal" style="max-width: 100%; margin-bottom: 48px;">
+          <h2 class="display-title" style="color: var(--charcoal); font-size: clamp(38px, 4.8vw, 56px); line-height: 1.15; margin-bottom: 16px; font-family: var(--font-display);">Two founders. Complementary market advantage.</h2>
+          <p class="lead-text" style="color: #4A5568; font-size: 17.5px; line-height: 1.65; max-width: 860px; margin: 0; font-weight: 400;">
             Axis Bridge is built around a leadership combination that is difficult to replicate: deep Nigerian commercial and relationship networks on one side, and long-standing Egyptian, academic and international market experience on the other.
           </p>
         </div>
 
         <div class="leadership-executive-grid reveal">
-          <!-- Founder 1: Muhammad Kasim (Photo switched as requested: suit photo) -->
-          <div class="leader-executive-card">
+          <!-- Founder 1: Muhammad Kasim (Suit Photo) -->
+          <div class="leader-executive-card" style="background: #FFFFFF !important; border: 1px solid #E2E8F0 !important; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;">
             <div class="leader-portrait-frame">
               <img src="assets/images/dr_ahmad_muhammad.jpg" alt="Muhammad Kasim — Co-Founder &amp; Executive Chairman">
-              <div class="leader-portrait-badge">Executive Chairman</div>
+              <div class="leader-portrait-badge" style="background: rgba(10, 37, 64, 0.92); color: #FFFFFF;">Executive Chairman</div>
             </div>
             <div class="leader-dossier-wrap">
               <div>
-                <span class="leader-role-kicker">Co-Founder &amp; Executive Chairman</span>
-                <h3>Muhammad Kasim</h3>
-                <p>
+                <span class="leader-role-kicker" style="color: var(--teal) !important;">Co-Founder &amp; Executive Chairman</span>
+                <h3 style="color: var(--charcoal) !important;">Muhammad Kasim</h3>
+                <p style="color: #4A5568 !important; font-size: 15px; line-height: 1.7;">
                   Brings high-level Nigerian business development, investor relations, strategic partnerships, major opportunity origination and corporate governance. Leads the firm's sovereign dialogue, capital introductions, and senior commercial relationships across West Africa.
                 </p>
               </div>
               <div class="leader-focus-tags">
-                <span>Nigeria Relationships</span>
-                <span>Investor Networks</span>
-                <span>Strategic Origination</span>
+                <span style="background: #EDF2F7 !important; color: #1E293B !important; border: 1px solid #CBD5E1 !important;">Nigeria Relationships</span>
+                <span style="background: #EDF2F7 !important; color: #1E293B !important; border: 1px solid #CBD5E1 !important;">Investor Networks</span>
+                <span style="background: #EDF2F7 !important; color: #1E293B !important; border: 1px solid #CBD5E1 !important;">Strategic Origination</span>
               </div>
             </div>
           </div>
 
-          <!-- Founder 2: Dr. Ahmad Muhammad (Photo switched as requested: white attire photo) -->
-          <div class="leader-executive-card">
+          <!-- Founder 2: Dr. Ahmad Muhammad (White Attire Photo) -->
+          <div class="leader-executive-card" style="background: #FFFFFF !important; border: 1px solid #E2E8F0 !important; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;">
             <div class="leader-portrait-frame">
               <img src="assets/images/muhammad_kasim.png" alt="Dr. Ahmad Muhammad — Co-Founder &amp; Chief Executive Officer">
-              <div class="leader-portrait-badge">Chief Executive Officer</div>
+              <div class="leader-portrait-badge" style="background: rgba(10, 37, 64, 0.92); color: #FFFFFF;">Chief Executive Officer</div>
             </div>
             <div class="leader-dossier-wrap">
               <div>
-                <span class="leader-role-kicker">Co-Founder &amp; Chief Executive Officer</span>
-                <h3>Dr. Ahmad Muhammad</h3>
-                <p>
+                <span class="leader-role-kicker" style="color: var(--teal) !important;">Co-Founder &amp; Chief Executive Officer</span>
+                <h3 style="color: var(--charcoal) !important;">Dr. Ahmad Muhammad</h3>
+                <p style="color: #4A5568 !important; font-size: 15px; line-height: 1.7;">
                   Brings corporate strategy, Egypt and North Africa relationships, academic &amp; hospital institutional alliances, service design, technology systems and execution quality. Leads the Cairo operational desk and oversees bilateral partner accreditation and delivery standards.
                 </p>
               </div>
               <div class="leader-focus-tags">
-                <span>Egypt &amp; North Africa</span>
-                <span>Institutional Alliances</span>
-                <span>Operating Systems</span>
+                <span style="background: #EDF2F7 !important; color: #1E293B !important; border: 1px solid #CBD5E1 !important;">Egypt &amp; North Africa</span>
+                <span style="background: #EDF2F7 !important; color: #1E293B !important; border: 1px solid #CBD5E1 !important;">Institutional Alliances</span>
+                <span style="background: #EDF2F7 !important; color: #1E293B !important; border: 1px solid #CBD5E1 !important;">Operating Systems</span>
               </div>
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
 
