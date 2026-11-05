@@ -594,17 +594,17 @@ p:last-child {
   background: rgba(20, 24, 27, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(22, 124, 128, 0.5);
+  border: 1px solid rgba(22, 124, 128, 0.45);
   border-radius: var(--radius-md);
-  padding: 18px 30px;
-  margin: 32px auto 0;
-  max-width: 840px;
+  padding: 14px 24px;
+  margin: 28px auto 0;
+  max-width: 860px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 14px;
   flex-wrap: wrap;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(22, 124, 128, 0.25);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(22, 124, 128, 0.2);
   transition: all var(--transition-smooth);
   position: relative;
   z-index: 5;
@@ -2443,9 +2443,9 @@ p:last-child {
 .corridor-node-btn {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px 24px;
-  min-width: 230px;
+  gap: 11px;
+  padding: 10px 18px;
+  min-width: 165px;
   background: #FFFFFF;
   border: 1px solid rgba(22, 124, 128, 0.35);
   border-radius: var(--radius-sm);
@@ -2453,25 +2453,25 @@ p:last-child {
   text-decoration: none;
   transition: all var(--transition-smooth);
   flex-shrink: 0;
-  box-shadow: 0 4px 18px rgba(22, 124, 128, 0.2), 0 0 15px rgba(214, 176, 48, 0.15);
+  box-shadow: 0 4px 16px rgba(22, 124, 128, 0.2), 0 0 12px rgba(45, 212, 191, 0.15);
 }
 
 .corridor-node-btn:hover {
   background: #FFFFFF;
-  border-color: var(--gold-light);
+  border-color: #2DD4BF;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(22, 124, 128, 0.35), 0 0 20px rgba(214, 176, 48, 0.3);
+  box-shadow: 0 8px 24px rgba(22, 124, 128, 0.35), 0 0 18px rgba(45, 212, 191, 0.3);
 }
 
 .corridor-node-btn .city {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
   color: #0A2540;
   line-height: 1.2;
 }
 
 .corridor-node-btn .role {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
   color: #334155;
   letter-spacing: 0.02em;
@@ -4507,4 +4507,70 @@ p:last-child {
   transform: translateY(-5px);
   border-color: var(--gold-light) !important;
   box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45), 0 0 30px rgba(22, 124, 128, 0.3) !important;
+}
+
+
+/* Subtly Transparent Hero Action Buttons */
+.hero-btn-translucent-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: rgba(22, 124, 128, 0.45);
+  border: 1px solid rgba(45, 212, 191, 0.6);
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.hero-btn-translucent-primary:hover {
+  background: rgba(22, 124, 128, 0.75);
+  border-color: #2DD4BF;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(22, 124, 128, 0.35);
+}
+
+.hero-btn-translucent-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.hero-btn-translucent-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Five Business Pillars Background Enhancements */
+.pillars-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pillars-nexus-section .container {
+  position: relative;
+  z-index: 2;
 }
