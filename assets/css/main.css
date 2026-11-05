@@ -503,16 +503,16 @@ p:last-child {
    ========================================================================== */
 
 .hero-refined {
-  min-height: clamp(680px, 90vh, 960px);
+  min-height: clamp(680px, 92vh, 920px);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 130px;
-  padding-bottom: 80px;
+  padding-top: clamp(130px, 14vw, 160px);
+  padding-bottom: clamp(60px, 8vw, 85px);
   background-color: var(--charcoal);
-  color: #F6F2E4;
-  overflow: visible;
+  color: #FFFFFF;
+  overflow: hidden;
   border-bottom: 1px solid var(--charcoal-border);
 }
 
@@ -695,7 +695,7 @@ p:last-child {
 .hero-content {
   position: relative;
   z-index: 5;
-  max-width: 600px;
+  max-width: 780px;
 }
 
 .hero-content .display-title {

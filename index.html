@@ -54,66 +54,53 @@
   <main id="mainContent">
     <section class="hero-refined" id="hero">
       
-      <!-- Integrated Architectural Bridge Photo inside Axis Bridge Logo Mark Pattern (Enhanced Visibility) -->
-      <div class="hero-visual-stage" aria-hidden="true">
-        <svg id="heroStage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <!-- Full Hero Background: Original Bridge-Pattern Mask Centered and Scaled Consistent with Other Pages -->
+      <div class="page-hero-backdrop" aria-hidden="true">
+        <svg viewBox="0 0 1600 780" preserveAspectRatio="xMidYMid slice" class="page-hero-pattern-svg">
           <defs>
-            <!-- Atmospheric brand gradient (Charcoal & Brand Teal) -->
-            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#14181B"/>
-              <stop offset="45%" stop-color="#1C2125"/>
-              <stop offset="75%" stop-color="#167C80" stop-opacity="0.75"/>
-              <stop offset="100%" stop-color="#14181B"/>
-            </linearGradient>
-
-            <!-- Axis Bridge Mask: Cutout revealing the bridge photograph inside official mark geometry -->
             <mask id="heroPatternMask">
-              <rect id="maskRect" width="1600" height="900" fill="#000"/>
-              <g id="gMask" fill="#fff" transform="translate(800 450) scale(6.4) translate(-935 -777)">
+              <rect width="1600" height="780" fill="#000"/>
+              <g fill="#fff" transform="translate(800 390) scale(5.8) translate(-935 -777)">
                 <use href="#mk" x="847" y="732" width="176" height="90"/>
               </g>
             </mask>
-
-            <!-- Axis Gold subtle sheen overlay -->
-            <linearGradient id="goldTint" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#B38F0C" stop-opacity="0.35"/>
-              <stop offset="100%" stop-color="#167C80" stop-opacity="0.15"/>
+            <linearGradient id="heroSkyTint" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0A2540" stop-opacity="0.82"/>
+              <stop offset="50%" stop-color="#167C80" stop-opacity="0.68"/>
+              <stop offset="100%" stop-color="#14181B" stop-opacity="0.88"/>
             </linearGradient>
           </defs>
 
-          <!-- Atmosphere Layer -->
-          <rect id="bgRect" width="1600" height="900" fill="url(#skyGrad)"/>
-
-          <!-- High-Res Architectural Bridge Image Masked inside the Axis Bridge Pattern (Full Vibrant Clarity) -->
-          <image href="assets/images/hero_bridge_wide.jpg" width="1600" height="900" preserveAspectRatio="xMidYMid slice" mask="url(#heroPatternMask)" opacity="1"/>
-
-          <!-- Gold Sheen Accent on Masked Bridge -->
-          <rect width="1600" height="900" fill="url(#goldTint)" mask="url(#heroPatternMask)" style="mix-blend-mode: overlay;"/>
-
-          <!-- Subtle Branded Gold Outline around Pattern geometry to define the architectural form -->
-          <g id="gMarkOutline" fill="none" stroke="#B38F0C" stroke-width="1.8" opacity="0.8" transform="translate(800 450) scale(6.4) translate(-935 -777)">
+          <!-- Original Bridge Pattern Image from Axis Bridge Logo across Full Hero Background -->
+          <image href="assets/images/hero_bridge_wide.jpg" width="1600" height="780" preserveAspectRatio="xMidYMid slice" mask="url(#heroPatternMask)" opacity="0.88"/>
+          <rect width="1600" height="780" fill="url(#heroSkyTint)" mask="url(#heroPatternMask)" style="mix-blend-mode: overlay;"/>
+          
+          <!-- Subtle Branded Gold Outline Tracing Official Pattern Geometry Perfectly Centered -->
+          <g fill="none" stroke="#D6B030" stroke-width="2.2" opacity="0.85" transform="translate(800 390) scale(5.8) translate(-935 -777)">
             <use href="#mk" x="847" y="732" width="176" height="90"/>
           </g>
         </svg>
+        <div class="page-hero-gradient-overlay" style="background: linear-gradient(90deg, rgba(14, 19, 22, 0.88) 0%, rgba(14, 19, 22, 0.65) 50%, rgba(14, 19, 22, 0.88) 100%);"></div>
       </div>
 
-      <div class="hero-vignette" aria-hidden="true"></div>
-
-      <!-- Hero Editorial Content: Succinct, Architectural & Distinctive (No Overlapping Elements) -->
+      <!-- Hero Editorial Content & Corridor Elements -->
       <div class="container" style="position: relative; z-index: 10;">
         <div class="hero-content">
-          <h1 class="display-title hero-animate-in" style="font-size: clamp(36px, 4.4vw, 52px); line-height: 1.16; margin-bottom: 16px;">
+          <h1 class="display-title hero-animate-in" style="font-size: clamp(38px, 4.8vw, 62px); line-height: 1.15; margin-bottom: 16px; font-family: var(--font-display);">
             Connecting Markets,<br>
-            <em>Creating Opportunities.</em>
+            <em style="color: var(--gold-light); font-style: normal;">Creating Opportunities.</em>
           </h1>
 
           <div class="hero-narrative-block hero-animate-in">
-            <p class="hero-credo" style="font-size: clamp(20px, 2.4vw, 30px); font-weight: 600; color: var(--gold-light); letter-spacing: -0.01em; margin-bottom: 24px;">
+            <p class="hero-credo" style="font-size: clamp(20px, 2.4vw, 28px); font-weight: 600; color: #FFFFFF; letter-spacing: -0.01em; margin-bottom: 12px;">
               Axis Bridge. Enduring Relationships.
+            </p>
+            <p class="lead-text hero-animate-in" style="color: #CBD5E1; font-size: clamp(16px, 1.3vw, 18px); line-height: 1.65; max-width: 680px; margin-bottom: 28px;">
+              Turning trusted relationships and local market knowledge into structured, professional and commercially valuable cross-border business.
             </p>
           </div>
 
-          <!-- Redesigned Hero CTA: Prominent Primary Action + Editorial Pathway -->
+          <!-- Hero Action Pathways -->
           <div class="hero-cta-editorial hero-animate-in">
             <a href="contact.html" class="btn btn-primary btn-lg">
               Initiate Engagement <span class="arrow">→</span>
@@ -123,8 +110,8 @@
             </a>
           </div>
 
-          <!-- Active Bilateral Anchors: Clearly Visible Centered Module with Subtle Glowing Light Effect & Darker Readable Text -->
-          <div class="bilateral-corridor-card hero-animate-in" style="margin-top: 30px; margin-bottom: 24px;">
+          <!-- Active Bilateral Anchors: Properly Aligned & Centered with Subtle Glowing Light Effect -->
+          <div class="bilateral-corridor-card hero-animate-in" style="margin-top: 36px; margin-bottom: 24px;">
             <a href="markets.html#active-corridor" class="corridor-node-btn" aria-label="Abuja Nigeria Bilateral Desk">
               <svg class="flag-icon" viewBox="0 0 36 24" width="30" height="20" aria-label="Flag of Nigeria">
                 <rect width="12" height="24" fill="#008751"/>
