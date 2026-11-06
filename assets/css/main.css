@@ -4756,3 +4756,487 @@ p:last-child {
     padding: 8px 14px !important;
   }
 }
+
+
+/* ==========================================================================
+   AXIS BRIDGE — SITE-WIDE UNIFIED ANIMATION SUITE
+   Cohesive, lightweight, GPU-accelerated motion system applied across all pages:
+   1. Internal Page Heroes (flowing silk entrance, floating media card, meta tags)
+   2. Scroll-Triggered Reveals & Staggered Grid Cascades (Markets, What We Do,
+      About, Opportunities, Partnerships, Insights, Contact)
+   3. Card Hover Elevations, Sheens & Glowing Borders
+   4. Interactive Button & Micro-Interactions (Arrow glide, Image zoom, Form focus)
+   5. Accessible Reduced Motion Compliance
+   ========================================================================== */
+
+/* 1. Internal Page Hero Silk Flowing Entrance */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-backdrop {
+  opacity: 0;
+  animation: heroBackdropFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroBackdropFade {
+  0% {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page-hero-text.hero-animate-in > * {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: heroFlowIn 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, transform, filter;
+}
+
+.page-hero-text.hero-animate-in > *:nth-child(1) { animation-delay: 0.10s; }
+.page-hero-text.hero-animate-in > *:nth-child(2) { animation-delay: 0.22s; }
+.page-hero-text.hero-animate-in > *:nth-child(3) { animation-delay: 0.36s; }
+.page-hero-text.hero-animate-in > *:nth-child(4) { animation-delay: 0.50s; }
+.page-hero-text.hero-animate-in > *:nth-child(5) { animation-delay: 0.64s; }
+
+.page-hero-text .hero-meta-strip .meta-tag {
+  opacity: 0;
+  transform: translateY(12px) scale(0.94);
+  animation: heroMetaPop 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.page-hero-text.hero-animate-in .hero-meta-strip .meta-tag:nth-child(1) { animation-delay: 0.45s; }
+.page-hero-text.hero-animate-in .hero-meta-strip .meta-tag:nth-child(2) { animation-delay: 0.55s; }
+.page-hero-text.hero-animate-in .hero-meta-strip .meta-tag:nth-child(3) { animation-delay: 0.65s; }
+.page-hero-text.hero-animate-in .hero-meta-strip .meta-tag:nth-child(4) { animation-delay: 0.75s; }
+.page-hero-text.hero-animate-in .hero-meta-strip .meta-tag:nth-child(5) { animation-delay: 0.85s; }
+
+@keyframes heroMetaPop {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.page-hero-media.hero-animate-in {
+  opacity: 0;
+  transform: translateY(26px) scale(0.97);
+  animation: heroMediaFloat 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.30s;
+  will-change: opacity, transform, filter;
+}
+
+@keyframes heroMediaFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(26px) scale(0.96);
+    filter: blur(4px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.hero-image-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35), 0 0 24px rgba(45, 212, 191, 0.2);
+}
+
+.hero-img-wrap img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-image-card:hover .hero-img-wrap img {
+  transform: scale(1.04);
+}
+
+/* 2. Global Scroll-Triggered Reveal Transitions */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Cascades across Market Opportunities Grid (markets.html) */
+.markets-grid .market-card {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease !important;
+}
+
+.markets-grid .market-card.in-view,
+.markets-grid.in-view .market-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.markets-grid .market-card:nth-child(1) { transition-delay: 0.08s; }
+.markets-grid .market-card:nth-child(2) { transition-delay: 0.20s; }
+.markets-grid .market-card:nth-child(3) { transition-delay: 0.32s; }
+.markets-grid .market-card:nth-child(4) { transition-delay: 0.44s; }
+.markets-grid .market-card:nth-child(5) { transition-delay: 0.56s; }
+
+.market-card:hover {
+  transform: translateY(-8px) scale(1.018) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16), 0 0 24px rgba(45, 212, 191, 0.25) !important;
+  border-color: rgba(45, 212, 191, 0.6) !important;
+}
+
+/* Staggered Cascades across Opportunities Track Cards (opportunities.html) */
+.opportunities-grid > .reveal {
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.opportunities-grid > .reveal:nth-child(1) { transition-delay: 0.08s; }
+.opportunities-grid > .reveal:nth-child(2) { transition-delay: 0.20s; }
+.opportunities-grid > .reveal:nth-child(3) { transition-delay: 0.32s; }
+.opportunities-grid > .reveal:nth-child(4) { transition-delay: 0.44s; }
+.opportunities-grid > .reveal:nth-child(5) { transition-delay: 0.56s; }
+
+.opportunities-grid > .reveal:hover {
+  transform: translateY(-7px) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12), 0 0 22px rgba(45, 212, 191, 0.2) !important;
+}
+
+/* Staggered Cascades across What We Do Detailed Pillars (what-we-do.html) */
+.pillar-interactive-panel.reveal {
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+}
+
+.pillar-interactive-panel:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14), 0 0 28px rgba(45, 212, 191, 0.2) !important;
+  border-color: rgba(45, 212, 191, 0.5) !important;
+}
+
+.pillar-interactive-panel .pillar-panel-photo-wrap img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pillar-interactive-panel:hover .pillar-panel-photo-wrap img {
+  transform: scale(1.045);
+}
+
+.btn-pillar-interactive {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pillar-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-pillar-interactive:hover .arr {
+  transform: translateX(6px);
+}
+
+/* Compliance and Professional Standards CTA Card (what-we-do.html) */
+.compliance-cta-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease !important;
+}
+
+.compliance-cta-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28), 0 0 26px rgba(45, 212, 191, 0.25) !important;
+  border-color: rgba(45, 212, 191, 0.6) !important;
+}
+
+/* Staggered Cascades across Insights Magazine Grid (insights.html) */
+.insights-magazine-grid .insight-card-interactive {
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.insights-magazine-grid .insight-card-interactive:nth-child(1) { transition-delay: 0.08s; }
+.insights-magazine-grid .insight-card-interactive:nth-child(2) { transition-delay: 0.18s; }
+.insights-magazine-grid .insight-card-interactive:nth-child(3) { transition-delay: 0.28s; }
+.insights-magazine-grid .insight-card-interactive:nth-child(4) { transition-delay: 0.38s; }
+.insights-magazine-grid .insight-card-interactive:nth-child(5) { transition-delay: 0.48s; }
+.insights-magazine-grid .insight-card-interactive:nth-child(6) { transition-delay: 0.58s; }
+
+.insight-card-interactive:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.15), 0 0 26px rgba(45, 212, 191, 0.25) !important;
+  border-color: rgba(45, 212, 191, 0.6) !important;
+}
+
+.insight-card-interactive img {
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.insight-card-interactive:hover img {
+  transform: scale(1.05);
+}
+
+/* Staggered Cascades across About Page Mission & Vision Cards (about.html) */
+.mission-vision-cards-grid > .reveal {
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+}
+
+.mission-vision-cards-grid > .reveal:nth-child(1) { transition-delay: 0.10s; }
+.mission-vision-cards-grid > .reveal:nth-child(2) { transition-delay: 0.24s; }
+
+.mission-vision-cards-grid > .reveal:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.14), 0 0 26px rgba(45, 212, 191, 0.2) !important;
+  border-color: rgba(45, 212, 191, 0.6) !important;
+}
+
+/* Governance Framework Cards (about.html) */
+.governance-framework-grid > .reveal {
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.governance-framework-grid > .reveal:nth-child(1) { transition-delay: 0.10s; }
+.governance-framework-grid > .reveal:nth-child(2) { transition-delay: 0.22s; }
+.governance-framework-grid > .reveal:nth-child(3) { transition-delay: 0.34s; }
+
+.governance-framework-grid > .reveal:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12), 0 0 22px rgba(45, 212, 191, 0.2) !important;
+}
+
+/* Leadership Executive Cards (about.html & index.html) */
+.leadership-grid-modern > .reveal,
+.leadership-executive-grid .leader-executive-card {
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+}
+
+.leadership-grid-modern > .reveal:nth-child(1) { transition-delay: 0.12s; }
+.leadership-grid-modern > .reveal:nth-child(2) { transition-delay: 0.28s; }
+
+.leadership-grid-modern > .reveal:hover,
+.leader-executive-card:hover {
+  transform: translateY(-7px) !important;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35), 0 0 28px rgba(45, 212, 191, 0.25) !important;
+}
+
+.leader-portrait-frame img,
+.leader-portrait-img img {
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.leader-executive-card:hover .leader-portrait-frame img,
+.leadership-grid-modern > .reveal:hover img {
+  transform: scale(1.045);
+}
+
+/* Partnerships Protocol Cards (partnerships.html) */
+.vetting-framework-grid .vetting-card-item {
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.vetting-framework-grid .vetting-card-item:nth-child(1) { transition-delay: 0.08s; }
+.vetting-framework-grid .vetting-card-item:nth-child(2) { transition-delay: 0.20s; }
+.vetting-framework-grid .vetting-card-item:nth-child(3) { transition-delay: 0.32s; }
+.vetting-framework-grid .vetting-card-item:nth-child(4) { transition-delay: 0.44s; }
+
+.vetting-card-item:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.08), 0 0 20px rgba(45, 212, 191, 0.2) !important;
+  border-color: rgba(45, 212, 191, 0.5) !important;
+}
+
+/* Contact Desks & Channels (contact.html) */
+.channel-card,
+.hub-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.channel-card:hover,
+.hub-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12), 0 0 22px rgba(45, 212, 191, 0.25);
+  border-color: #2DD4BF;
+}
+
+/* Form Inputs Smooth Interaction Focus Glow */
+.form-input,
+.form-select,
+.form-textarea {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #2DD4BF !important;
+  outline: none;
+  box-shadow: 0 0 0 3.5px rgba(45, 212, 191, 0.22) !important;
+  background-color: #FFFFFF !important;
+}
+
+/* 4. Global Buttons & Micro-Interactions */
+.btn,
+.btn-primary,
+.btn-secondary,
+.hero-btn-translucent-primary,
+.hero-btn-translucent-secondary {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.hero-btn-translucent-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(22, 124, 128, 0.35), 0 0 18px rgba(45, 212, 191, 0.3);
+}
+
+.arrow,
+span.arr,
+span.scroll-arrow {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover .arrow,
+.btn:hover span.arr,
+a:hover > span.arrow,
+a:hover > span.arr {
+  transform: translateX(5px);
+}
+
+.hero-scroll-transition:hover span.scroll-arrow {
+  transform: translateY(4px);
+}
+
+/* Image Frames Across All Pages */
+.image-frame-geometric {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-frame-geometric .image-frame-inner img {
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.image-frame-geometric:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22), 0 0 26px rgba(45, 212, 191, 0.2);
+}
+
+.image-frame-geometric:hover .image-frame-inner img {
+  transform: scale(1.045);
+}
+
+/* Primary Navigation Animated Hover Indicator */
+.primary-nav a {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.primary-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #2DD4BF;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 99px;
+}
+
+.primary-nav a:hover::after,
+.primary-nav a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Bilateral Pulse Dot (Active Corridor) */
+@keyframes corridorPulseAnimation {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.7);
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 10px rgba(45, 212, 191, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0);
+  }
+}
+
+.corridor-pulse-dot {
+  animation: corridorPulseAnimation 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* 5. Accessible Reduced Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .page-hero-text.hero-animate-in > *,
+  .page-hero-media.hero-animate-in,
+  .markets-grid .market-card,
+  .stats-strip-item,
+  .pillars-nexus-grid .pillar-nexus-card {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}

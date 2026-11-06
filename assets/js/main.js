@@ -135,11 +135,13 @@ function highlightActiveNav() {
  * Scroll Triggered Reveals
  */
 function initScrollReveals() {
-  const reveals = document.querySelectorAll('.reveal');
-  if (!reveals.length) return;
+  // Select all .reveal elements plus card and panel components across all pages
+  const selector = '.reveal, .market-card, .pillar-interactive-panel, .insight-card-interactive, .vetting-card-item, .opportunities-grid > div';
+  const elements = document.querySelectorAll(selector);
+  if (!elements.length) return;
 
   if (!('IntersectionObserver' in window)) {
-    reveals.forEach(el => el.classList.add('in-view'));
+    elements.forEach(el => el.classList.add('in-view'));
     return;
   }
 
@@ -151,11 +153,11 @@ function initScrollReveals() {
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -30px 0px'
   });
 
-  reveals.forEach(el => observer.observe(el));
+  elements.forEach(el => observer.observe(el));
 }
 
 /**
